@@ -1,0 +1,39 @@
+version: 2.1
+orbs:
+ python: circleci/python@2.0.3
+jobs:
+ build_and_test:
+   executor: python/default
+   docker:
+     - image: cimg/python:3.10.2
+   steps:
+     - checkout
+     - python/install-packages:
+         pkg-manager: pip
+     - run:
+         name: Run tests
+         command: |
+           uvicorn app:app --reload
+ build_and_test_docker:
+   parallelism: 4
+   docker:
+     - image: cimg/python:3.10.2
+   steps:
+     - checkout
+     - setup_remote_docker:
+         version: 20.10.7
+         docker_layer_caching: true 
+     - run:
+         name: Build and start Docker Compose services
+         command: |
+           docker-compose build
+           docker-compose up -d
+     - run:
+         name: Stop and remove Docker Compose services
+         command: |
+           docker-compose down
+workflows:
+ run-build-test:
+   jobs:
+     - build_and_test
+     - build_and_test_docker

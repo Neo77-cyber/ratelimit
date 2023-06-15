@@ -1,0 +1,13 @@
+version: "3"
+services:
+  redis-server:
+    image: redis:latest
+  fapi:
+    build: .
+    restart: always
+    depends_on:
+      - redis-server
+    volumes:
+      - .:/backend
+    ports:
+      - "8000:8000"
