@@ -33,34 +33,28 @@ To get started with the rate limit application, follow these steps:
 
 ## Configuration
 
-The rate limit configuration can be customized to suit your needs. The configuration file is located at `app/config.py`. Modify the values according to your desired rate limits:
-
-```python
-# app/config.py
-
-# Rate limit values
-REQUEST_LIMIT = 5  # Maximum number of requests allowed
-TIME_FRAME = 180  # Time frame (in seconds) within which the requests limit applies
-
-
-
-
+The rate limit configuration can be customized to suit your needs.
 
 Feel free to adjust the REQUEST_LIMIT and TIME_FRAME values to meet your requirements.
 
 Usage
 To use the rate limit application, simply make requests to the desired API endpoints. The application will automatically enforce the rate limits and return appropriate responses when the limits are exceeded.
 
-The response headers will include information about the rate limits, such as the number of requests remaining and the reset time.
+
 
 Contributing
 Contributions are welcome! If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.
 
-License
-This rate limit application is licensed under the MIT License.
 
 Acknowledgements
 FastAPI - FastAPI framework
 Docker - Containerization platform
 Contact
-For any questions or inquiries, please contact email@example.com.
+For any questions or inquiries, please contact ikponmwosaenabs@gmail.com
+
+
+
+
+
+
+
