@@ -37,16 +37,16 @@ The rate limit configuration can be customized to suit your needs.
 
 Feel free to adjust the REQUEST_LIMIT and TIME_FRAME values to meet your requirements.
 
-Usage
+## Usage
 To use the rate limit application, simply make requests to the desired API endpoints. The application will automatically enforce the rate limits and return appropriate responses when the limits are exceeded.
 
 
 
-Contributing
+## Contributing
 Contributions are welcome! If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.
 
 
-Acknowledgements
+## Acknowledgements
 FastAPI - FastAPI framework
 Docker - Containerization platform
 Contact
